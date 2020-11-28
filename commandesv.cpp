@@ -37,7 +37,7 @@ return query.exec();
 
 //-------------------Afficher-------------------------------------------------//
 
-QSqlQueryModel * afficher(){
+QSqlQueryModel * affichercommandesv(){
     QSqlQueryModel *model=new QSqlQueryModel();
         model->setQuery("select * from COMMANDESV ");
         model->setHeaderData(0, Qt::Horizontal, QObject::tr("Id_CommandesVente"));

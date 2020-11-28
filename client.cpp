@@ -56,7 +56,7 @@ bool Client::ajouter(){
 
 //-------------------Afficher-------------------------------------------------//
 
-QSqlQueryModel * afficher(){
+QSqlQueryModel * afficherclient(){
     QSqlQueryModel *model=new QSqlQueryModel();
         model->setQuery("select * from CLIENT ");
         model->setHeaderData(0, Qt::Horizontal, QObject::tr("Id_Client"));

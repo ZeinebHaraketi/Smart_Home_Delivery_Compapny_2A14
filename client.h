@@ -42,7 +42,7 @@ public:
 
     //Les Méthodes de base ----> CRUD
     bool ajouter();
-    QSqlQueryModel * afficher();
+    QSqlQueryModel * afficherclient();
     bool supprimer(int ID);
     bool modifier(int,QString,QString,int,QString,QString,QString,int,QString,float,int,QString);
 

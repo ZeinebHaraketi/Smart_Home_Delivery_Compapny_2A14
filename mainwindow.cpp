@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "client.h"
+#include <QtWidgets>
 
 MainWindow::MainWindow(QWidget *parent): QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -18,8 +19,8 @@ void MainWindow::on_pushButton_ajouter_clicked(){
 
 
    // Récupération des infos saisies
-   // QString nomC= ui->lineEdit ->text();
-  //  QString prenomC= ui->lineEdit_prenomC->text();
+   // QString nom= ui->lineEdit ->text();
+  //  QString prenom= ui->lineEdit_prenomC->text();
 
 //Client C();
 

@@ -29,7 +29,7 @@ public:
 
     //Les Méthodes de base ----> CRUD
     bool ajouter();
-    QSqlQueryModel * afficher();
+    QSqlQueryModel * affichercommandesv();
     bool supprimer(int ID);
     bool modifier(int,QString,float,QString);
 
