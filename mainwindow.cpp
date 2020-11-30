@@ -73,22 +73,50 @@ void MainWindow::on_pushButton2_clicked()
 void MainWindow::on_pushButton3_clicked()
 {
     ui->stackedWidget->setCurrentIndex(3);
+    QMediaPlayer * bulletsound = new QMediaPlayer();
+          bulletsound->setMedia(QUrl::fromLocalFile("C:/Users/HP/Downloads/son1.wav"));
+         if (bulletsound->state() == QMediaPlayer::PlayingState){
+              bulletsound->setPosition(0);
+          }
+          else if (bulletsound->state() == QMediaPlayer::StoppedState){
+              bulletsound->play();}
 }
 
 
 void MainWindow::on_pushButton_2_clicked()
 {
     ui->stackedWidget->setCurrentIndex(4);
+    QMediaPlayer * bulletsound = new QMediaPlayer();
+          bulletsound->setMedia(QUrl::fromLocalFile("C:/Users/HP/Downloads/son1.wav"));
+         if (bulletsound->state() == QMediaPlayer::PlayingState){
+              bulletsound->setPosition(0);
+          }
+          else if (bulletsound->state() == QMediaPlayer::StoppedState){
+              bulletsound->play();}
 }
 
 void MainWindow::on_pushButton_3_clicked()
 {
     ui->stackedWidget->setCurrentIndex(2);
+    QMediaPlayer * bulletsound = new QMediaPlayer();
+          bulletsound->setMedia(QUrl::fromLocalFile("C:/Users/HP/Downloads/son1.wav"));
+         if (bulletsound->state() == QMediaPlayer::PlayingState){
+              bulletsound->setPosition(0);
+          }
+          else if (bulletsound->state() == QMediaPlayer::StoppedState){
+              bulletsound->play();}
 }
 
 void MainWindow::on_pushButton_6_clicked()
 {
     ui->stackedWidget->setCurrentIndex(2);
+    QMediaPlayer * bulletsound = new QMediaPlayer();
+          bulletsound->setMedia(QUrl::fromLocalFile("C:/Users/HP/Downloads/son1.wav"));
+         if (bulletsound->state() == QMediaPlayer::PlayingState){
+              bulletsound->setPosition(0);
+          }
+          else if (bulletsound->state() == QMediaPlayer::StoppedState){
+              bulletsound->play();}
 }
 
 
@@ -360,11 +388,53 @@ void MainWindow::on_tableView2_clicked(const QModelIndex &index)
 void MainWindow::on_actualiser2_clicked()
 {   plat1 p1;
     ui->tableView2->setModel(p1.afficher());
+    QMediaPlayer * bulletsound = new QMediaPlayer();
+          bulletsound->setMedia(QUrl::fromLocalFile("C:/Users/HP/Downloads/son1.wav"));
+         if (bulletsound->state() == QMediaPlayer::PlayingState){
+              bulletsound->setPosition(0);
+          }
+          else if (bulletsound->state() == QMediaPlayer::StoppedState){
+              bulletsound->play();
 
-}
+}}
 /*************retour2*********/
 void MainWindow::on_retour2_clicked()
 {
     ui->stackedWidget->setCurrentIndex(2);
+    QMediaPlayer * bulletsound = new QMediaPlayer();
+          bulletsound->setMedia(QUrl::fromLocalFile("C:/Users/HP/Downloads/son1.wav"));
+         if (bulletsound->state() == QMediaPlayer::PlayingState){
+              bulletsound->setPosition(0);
+          }
+          else if (bulletsound->state() == QMediaPlayer::StoppedState){
+              bulletsound->play();}
 
 }
+/************supprimer_2**************/
+void MainWindow::on_supprimer2_clicked()
+{   plat1 p1;
+    if(p1.supprimer(ui))
+    {
+        QMessageBox ::information(this,"","plat Supprimé")  ;
+
+
+           ui->tableView2->setModel(p1.afficher());
+
+    }
+    else{
+        QMessageBox ::critical(this,"","erreur!")  ;
+    }
+}
+/**********retour_home************/
+void MainWindow::on_pushButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+    QMediaPlayer * bulletsound = new QMediaPlayer();
+          bulletsound->setMedia(QUrl::fromLocalFile("C:/Users/HP/Downloads/son1.wav"));
+         if (bulletsound->state() == QMediaPlayer::PlayingState){
+              bulletsound->setPosition(0);
+          }
+          else if (bulletsound->state() == QMediaPlayer::StoppedState){
+              bulletsound->play();
+
+}}

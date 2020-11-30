@@ -73,3 +73,23 @@ bool plat1::modifier1(Ui::MainWindow *ui)
    return  (query.exec());
 
 }
+ bool plat1::supprimer(Ui::MainWindow *ui)
+ {
+     QString ref=ui->tableView2->model()->data(ui->tableView2->model()->index(ui->tableView2->selectionModel()->currentIndex().row(),0)).toString();
+
+     QSqlQuery query;
+     query.prepare("select * FROM plat1 WHERE nomplat ='"+ref+"'");
+     query.exec();
+     int total=0;
+     while(query.next()){
+         total++;
+     }
+     if(total==1){
+         QSqlQuery q;
+         q.prepare("DELETE FROM plat1 WHERE nomplat='"+ref+"'");
+         return q.exec();
+     }
+     else{
+         return false;
+     }
+ }
