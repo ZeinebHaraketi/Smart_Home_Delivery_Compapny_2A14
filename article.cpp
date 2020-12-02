@@ -13,7 +13,7 @@ article::article(int prix,int quantite,QString type_ar,int code)
     this->quantite=quantite;
     this->type_ar=type_ar;
     this->code=code;
-
+//prix
 }
 int article::getprix()
 {return prix ;}
