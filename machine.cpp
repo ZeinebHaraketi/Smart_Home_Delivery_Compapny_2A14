@@ -24,7 +24,7 @@ QString machines::get_poids_ideal(){return poids_ideal;}
 QString machines::get_duree_regime(){return duree_regime;}
 QString machines::get_sport(){return sport;}
 
-
+/********ajouter**********/
 bool machines::ajouter(QString meals,QString poids_ideal,QString duree_regime,QString sport)
 {
 QSqlQuery query;
@@ -37,7 +37,7 @@ query.bindValue(":duree_regime",duree_regime);
 query.bindValue(":sport",sport);
 return    query.exec();
 }
-
+/*********afficher*********/
 QSqlQueryModel * machines ::afficher()
 {QSqlQueryModel * model= new QSqlQueryModel();
 
@@ -235,3 +235,67 @@ return query.exec();
 
     return total;
  }
+ /*******verification_va1******/
+  bool machines:: verifpoids_ideal(Ui::MainWindow *ui)
+  {
+      QPixmap PixTrueIcon=QPixmap(":/oui.png");
+        QPixmap PixFalseIcon=QPixmap(":/non.png");
+
+         if (ui->lineEdit_10->text().isEmpty() || ui->lineEdit_10->text().length()>3|| ui->lineEdit_10->text().contains(QRegExp("[^0-9]")))
+         {
+             ui->va1->setPixmap(PixFalseIcon);
+             return false;
+
+         }
+         else
+         {
+             ui->va1->setPixmap(PixTrueIcon);
+             return true;
+  }}
+  /******verification_va2*********/
+  bool machines::verifduree_regime(Ui::MainWindow *ui)
+  {
+
+      QPixmap PixTrueIcon=QPixmap(":/oui.png");
+        QPixmap PixFalseIcon=QPixmap(":/non.png");
+
+         if (ui->lineEdit_11->text().isEmpty() || ui->lineEdit_11->text().length()>10)
+         {
+             ui->va2->setPixmap(PixFalseIcon);
+             return false;
+
+         }
+         else
+         {
+             ui->va2->setPixmap(PixTrueIcon);
+             return true;
+  }}
+  /********verification_va3*******/
+   bool machines::verifmeals(Ui::MainWindow *ui)
+   {
+
+       QPixmap PixTrueIcon=QPixmap(":/oui.png");
+         QPixmap PixFalseIcon=QPixmap(":/non.png");
+
+          if (ui->lineEdit_9->text().isEmpty() || ui->lineEdit_9->text().length()>20|| ui->lineEdit_9->text().contains(QRegExp("[^a-zA-Z]")))
+          {
+              ui->va3->setPixmap(PixFalseIcon);
+              return false;
+
+          }
+          else
+          {
+              ui->va3->setPixmap(PixTrueIcon);
+              return true;
+   }}
+/******init_fray*****/
+void machines::inifray(Ui::MainWindow *ui)
+{
+    ui->lineEdit_3->setToolTip("le plat contient juste des caracteres");
+    ui->lineEdit_4->setToolTip("les ingrediants contiennet des lettres sans espace");
+    ui->lineEdit_5->setToolTip("Adresse juste la region");
+
+
+}
+
+

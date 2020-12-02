@@ -54,7 +54,10 @@ void MainWindow::on_pushButton1_clicked()
 {
     ui->stackedWidget->setCurrentIndex(1);
     machines M;
+    plat1 p1;
     ui->tableView->setModel(M.afficher());
+    M.inifray(ui);
+     ui->tableView2->setModel(p1.afficher());
 }
 
 void MainWindow::on_pushButton2_clicked()
@@ -136,7 +139,7 @@ void MainWindow::on_pushButton4_clicked()
      bool test=A1.ajouter(meals,poids_ideal,duree_regime,sport);
      ui->tableView->setModel(A1.afficher());
      QMessageBox msgBox;
-      if(test)
+      if(test &&A1.verifpoids_ideal(ui)&& A1.verifduree_regime(ui)&& A1.verifmeals(ui))
     {
           ui->tableView->setModel(A1.afficher());
                                  msgBox.setText(" Ajouté.");
@@ -337,6 +340,7 @@ void MainWindow::on_retour_clicked()
     ui->stackedWidget->setCurrentIndex(2);
 }
 /******************************plat1************************ */
+                /**ajouter_2*******/
 void MainWindow::on_ajouter2_clicked()
 {
             QString nomplat= ui->lineEdit_3->text();
@@ -350,7 +354,7 @@ void MainWindow::on_ajouter2_clicked()
          bool test=p1.ajouter(nomplat,ingredients,adresse,paymant);
          ui->tableView2->setModel(p1.afficher());
          QMessageBox msgBox;
-          if(test)
+          if(test && p1.verifnomplat(ui)&& p1.verifingredients(ui)&&  p1.verifadresse(ui) )
         {
               ui->tableView2->setModel(p1.afficher());
                                      msgBox.setText(" Ajouté.");
@@ -358,7 +362,7 @@ void MainWindow::on_ajouter2_clicked()
           }
 }
 
-/******************modifier2**********/
+/******************modifier_2**********/
 
 
 void MainWindow::on_modifier2_clicked()
@@ -383,7 +387,7 @@ void MainWindow::on_tableView2_clicked(const QModelIndex &index)
     ui->line15->setText( ui->tableView2->model()->data(ui->tableView2->model()->index(ui->tableView2->selectionModel()->currentIndex().row(),2)).toString() );
 }
 
-/************actualiser2********/
+/************actualiser_2********/
 
 void MainWindow::on_actualiser2_clicked()
 {   plat1 p1;
@@ -397,7 +401,7 @@ void MainWindow::on_actualiser2_clicked()
               bulletsound->play();
 
 }}
-/*************retour2*********/
+/*************retour_2*********/
 void MainWindow::on_retour2_clicked()
 {
     ui->stackedWidget->setCurrentIndex(2);
@@ -425,10 +429,28 @@ void MainWindow::on_supprimer2_clicked()
         QMessageBox ::critical(this,"","erreur!")  ;
     }
 }
-/**********retour_home************/
-void MainWindow::on_pushButton_clicked()
+
+    /*********trier_2******/
+void MainWindow::on_pushButton_4_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(1);
+    QMessageBox msgBox ;
+
+        QSqlQueryModel *model = new QSqlQueryModel();
+                 model->setQuery("select * from PLAT1 order by nomplat ");
+                 model->setHeaderData(0, Qt::Horizontal, QObject::tr("adresse"));
+                 model->setHeaderData(1, Qt::Horizontal, QObject::tr("nomplat"));
+                 model->setHeaderData(2, Qt::Horizontal, QObject::tr("ingredients"));
+                 model->setHeaderData(3, Qt::Horizontal, QObject::tr("paymant"));
+                 ui->tableView2->setModel(model);
+                 ui->tableView2->show();
+                 msgBox.setText("Tri avec succés.");
+
+                 msgBox.exec();
+
+}
+/*********imprimer_2***************/
+void MainWindow::on_imprimer_2_clicked()
+{
     QMediaPlayer * bulletsound = new QMediaPlayer();
           bulletsound->setMedia(QUrl::fromLocalFile("C:/Users/HP/Downloads/son1.wav"));
          if (bulletsound->state() == QMediaPlayer::PlayingState){
@@ -436,5 +458,126 @@ void MainWindow::on_pushButton_clicked()
           }
           else if (bulletsound->state() == QMediaPlayer::StoppedState){
               bulletsound->play();
+          }
+    //imprimer
 
-}}
+       QPrinter printer;
+
+       printer.setPrinterName("desiered printer name");
+
+     QPrintDialog dialog(&printer,this);
+
+       if(dialog.exec()== QDialog::Rejected)
+
+           return;
+}
+/***************PDF_2************/
+void MainWindow::on_PDF_2_clicked()
+{
+    QMediaPlayer * bulletsound = new QMediaPlayer();
+          bulletsound->setMedia(QUrl::fromLocalFile("C:/Users/HP/Downloads/son1.wav"));
+         if (bulletsound->state() == QMediaPlayer::PlayingState){
+              bulletsound->setPosition(0);
+          }
+          else if (bulletsound->state() == QMediaPlayer::StoppedState){
+              bulletsound->play();
+          }
+    QString strStream;
+                     QTextStream out(&strStream);
+
+                     const int rowCount = ui->tableView2->model()->rowCount();
+                     const int columnCount = ui->tableView2->model()->columnCount();
+
+                     out <<  "<html>\n"
+                         "<head>\n"
+                         "<meta Content=\"Text/html; charset=Windows-1251\">\n"
+                         <<  QString("<title>%1</title>\n").arg("strTitle")
+                         <<  "</head>\n"
+                         "<body bgcolor=#ffffff link=#5000A0>\n"
+
+                        //     "<align='right'> " << datefich << "</align>"
+                         "<center> <H1>Liste des plats </H1></br></br><table border=1 cellspacing=0 cellpadding=2>\n";
+
+                     // headers
+                     out << "<thead><tr bgcolor=#f0f0f0> <th>Numero</th>";
+                     for (int column = 0; column < columnCount; column++)
+                         if (!ui->tableView2->isColumnHidden(column))
+                             out << QString("<th>%1</th>").arg(ui->tableView2->model()->headerData(column, Qt::Horizontal).toString());
+                     out << "</tr></thead>\n";
+
+                     // data table
+                     for (int row = 0; row < rowCount; row++) {
+                         out << "<tr> <td bkcolor=0>" << row+1 <<"</td>";
+                         for (int column = 0; column < columnCount; column++) {
+                             if (!ui->tableView2->isColumnHidden(column)) {
+                                 QString data = ui->tableView2->model()->data(ui->tableView2->model()->index(row, column)).toString().simplified();
+                                 out << QString("<td bkcolor=0>%1</td>").arg((!data.isEmpty()) ? data : QString("&nbsp;"));
+                             }
+                         }
+                         out << "</tr>\n";
+                     }
+                     out <<  "</table> </center>\n"
+                         "</body>\n"
+                         "</html>\n";
+
+               QString fileName = QFileDialog::getSaveFileName((QWidget* )0, "Sauvegarder en PDF", QString(), "*.pdf");
+                 if (QFileInfo(fileName).suffix().isEmpty()) { fileName.append(".pdf"); }
+
+                QPrinter printer (QPrinter::PrinterResolution);
+                 printer.setOutputFormat(QPrinter::PdfFormat);
+                printer.setPaperSize(QPrinter::A4);
+               printer.setOutputFileName(fileName);
+
+                QTextDocument doc;
+                 doc.setHtml(strStream);
+                 doc.setPageSize(printer.pageRect().size()); // This is necessary if you want to hide the page number
+                 doc.print(&printer);
+}
+/*********rechercher_2*********/
+
+void MainWindow::on_rechercher_2_cursorPositionChanged(int arg1, int arg2)
+{
+    int RowCount;
+            QString nomplat1=ui->rechercher_2->text();
+           plat1 plat1;
+            ui->tableView2->setModel(plat1.ConsulterPointageParticulier(nomplat1,&RowCount));
+}
+/*****verif_va4***********/
+
+
+void MainWindow::on_lineEdit_3_cursorPositionChanged(int arg1, int arg2)
+{
+    plat1 p1;
+    p1.verifnomplat(ui);
+}
+/********verif_va5*********/
+void MainWindow::on_lineEdit_4_cursorPositionChanged(int arg1, int arg2)
+{
+    plat1 p1;
+    p1.verifingredients(ui);
+}
+/********verif_va6*********/
+void MainWindow::on_lineEdit_5_cursorPositionChanged(int arg1, int arg2)
+{   plat1 p1;
+    p1.verifadresse(ui);
+}
+/********verif_va1*********/
+void MainWindow::on_lineEdit_10_cursorPositionChanged(int arg1, int arg2)
+{
+    machines A1;
+    A1.verifpoids_ideal(ui);
+
+}
+/********verif_va2*********/
+void MainWindow::on_lineEdit_11_cursorPositionChanged(int arg1, int arg2)
+{
+    machines A1;
+    A1.verifduree_regime(ui);
+
+}
+
+void MainWindow::on_lineEdit_9_cursorPositionChanged(int arg1, int arg2)
+{
+    machines A1;
+    A1.verifmeals(ui);
+}

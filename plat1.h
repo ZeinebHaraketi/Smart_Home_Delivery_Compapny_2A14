@@ -38,11 +38,16 @@ public:
       QSqlQueryModel * recherche_e(int valeur);
       QSqlQueryModel * recherche_nomplatd(QString valeur);
       QSqlQueryModel * tri(int index);
-      QSqlQueryModel *ConsulterPointageParticulier(QString ingredients1, int *RowCount);
+
       bool updatenomplats(QString nomplat);
        QString getTableName();
        int calculerpaymant(QString paymant);
        bool modifier1(Ui::MainWindow *ui);
+       plat1 Recherchernomplat(QString matricule1);
+        QSqlQueryModel *ConsulterPointageParticulier(QString nomplat1, int *RowCount);
+        bool verifnomplat(Ui::MainWindow *ui);
+        bool verifingredients(Ui::MainWindow *ui);
+        bool verifadresse(Ui::MainWindow *ui);
 private:
     QString adresse,nomplat,ingredients,paymant;
     int ref;

@@ -68,6 +68,26 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_pushButton_4_clicked();
+
+    void on_imprimer_2_clicked();
+
+    void on_PDF_2_clicked();
+
+    void on_rechercher_2_cursorPositionChanged(int arg1, int arg2);
+
+    void on_lineEdit_3_cursorPositionChanged(int arg1, int arg2);
+
+    void on_lineEdit_4_cursorPositionChanged(int arg1, int arg2);
+
+    void on_lineEdit_5_cursorPositionChanged(int arg1, int arg2);
+
+    void on_lineEdit_10_cursorPositionChanged(int arg1, int arg2);
+
+    void on_lineEdit_11_cursorPositionChanged(int arg1, int arg2);
+
+    void on_lineEdit_9_cursorPositionChanged(int arg1, int arg2);
+
 private:
     Ui::MainWindow *ui;
 };
