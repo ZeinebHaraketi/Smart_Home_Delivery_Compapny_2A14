@@ -11,5 +11,7 @@
         <file>../non.jpg</file>
         <file>../pdf1.png</file>
         <file>../supp.png</file>
+        <file>../oui1.png</file>
+        <file>../non1.png</file>
     </qresource>
 </RCC>

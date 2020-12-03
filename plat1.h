@@ -43,6 +43,9 @@ public:
        QString getTableName();
        int calculerpaymant(QString paymant);
        bool modifier1(Ui::MainWindow *ui);
+       bool verifva4(Ui::MainWindow *ui);
+       bool verifva5(Ui::MainWindow *ui);
+       bool verifva6(Ui::MainWindow *ui);
 private:
     QString adresse,nomplat,ingredients,paymant;
     int ref;

@@ -621,9 +621,9 @@ QPushButton:hover {
        <widget class="QLabel" name="va1">
         <property name="geometry">
          <rect>
-          <x>630</x>
+          <x>620</x>
           <y>30</y>
-          <width>47</width>
+          <width>71</width>
           <height>41</height>
          </rect>
         </property>
@@ -634,9 +634,9 @@ QPushButton:hover {
        <widget class="QLabel" name="va2">
         <property name="geometry">
          <rect>
-          <x>630</x>
-          <y>110</y>
-          <width>47</width>
+          <x>620</x>
+          <y>120</y>
+          <width>71</width>
           <height>41</height>
          </rect>
         </property>
@@ -647,9 +647,9 @@ QPushButton:hover {
        <widget class="QLabel" name="va3">
         <property name="geometry">
          <rect>
-          <x>630</x>
+          <x>620</x>
           <y>200</y>
-          <width>47</width>
+          <width>71</width>
           <height>41</height>
          </rect>
         </property>
@@ -1151,7 +1151,7 @@ QPushButton:hover {
 </string>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab_3">
        <attribute name="title">
@@ -1260,10 +1260,10 @@ background-color: rgb(255, 255, 255);</string>
        <widget class="QPushButton" name="ajouter2">
         <property name="geometry">
          <rect>
-          <x>440</x>
-          <y>340</y>
-          <width>75</width>
-          <height>23</height>
+          <x>490</x>
+          <y>310</y>
+          <width>131</width>
+          <height>51</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -1288,10 +1288,10 @@ QPushButton:hover {
        <widget class="QPushButton" name="pushButton_6">
         <property name="geometry">
          <rect>
-          <x>530</x>
-          <y>340</y>
-          <width>75</width>
-          <height>23</height>
+          <x>690</x>
+          <y>312</y>
+          <width>121</width>
+          <height>51</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -1348,6 +1348,45 @@ color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
          <string>Paymant</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="va5">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>120</y>
+          <width>71</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="va6">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>180</y>
+          <width>71</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="va4">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>60</y>
+          <width>71</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
         </property>
        </widget>
       </widget>

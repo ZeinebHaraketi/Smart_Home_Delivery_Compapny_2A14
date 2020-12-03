@@ -76,6 +76,10 @@ private slots:
 
     void on_lineEdit_10_cursorPositionChanged(int arg1, int arg2);
 
+    void on_lineEdit_11_cursorPositionChanged(int arg1, int arg2);
+
+    void on_lineEdit_9_cursorPositionChanged(int arg1, int arg2);
+
 private:
     Ui::MainWindow *ui;
 };
