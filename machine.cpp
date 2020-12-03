@@ -23,7 +23,7 @@ QString machines::get_meals(){return meals;}
 QString machines::get_poids_ideal(){return poids_ideal;}
 QString machines::get_duree_regime(){return duree_regime;}
 QString machines::get_sport(){return sport;}
-
+/*******ajouter*******/
 
 bool machines::ajouter(QString meals,QString poids_ideal,QString duree_regime,QString sport)
 {
@@ -37,7 +37,7 @@ query.bindValue(":duree_regime",duree_regime);
 query.bindValue(":sport",sport);
 return    query.exec();
 }
-
+/*******afficher********/
 QSqlQueryModel * machines ::afficher()
 {QSqlQueryModel * model= new QSqlQueryModel();
 
@@ -132,6 +132,7 @@ QSqlQueryModel * machines :: recherche_mealsd(QString valeur)
     return model;
 
 }
+
 machines machines::Recherchemeals(QString poids_ideal){
 machines mealsAConsulter;
 QSqlQuery query;
@@ -221,7 +222,7 @@ return mealsAConsulter;
  query.bindValue (":duree_regime", duree_regime);
 return query.exec();
   }
-
+/*******calculersport*******/
  int machines::calculersport(QString sport){
     QSqlQuery query;
     query.prepare("select * from machines where sport=:sport");
@@ -235,3 +236,21 @@ return query.exec();
 
     return total;
  }
+ bool machines::verifva1(Ui::MainWindow *ui){
+     QPixmap PixTrueIcon=QPixmap(":/oui.png");
+    QPixmap PixFalseIcon=QPixmap(":/non.png");
+
+     if (ui->label_10->text().isEmpty() )
+     {
+         ui->va1->setPixmap(PixFalseIcon);
+         return false;
+
+     }
+     else
+     {
+         ui->va1->setPixmap(PixTrueIcon);
+         return true;
+
+     }
+ }
+

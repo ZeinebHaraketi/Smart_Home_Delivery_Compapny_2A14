@@ -6,5 +6,10 @@
         <file>../back30.jpg</file>
         <file>../diet1.jpg</file>
         <file>../meal2.jpg</file>
+        <file>../impr.png</file>
+        <file>../oui.png</file>
+        <file>../non.jpg</file>
+        <file>../pdf1.png</file>
+        <file>../supp.png</file>
     </qresource>
 </RCC>

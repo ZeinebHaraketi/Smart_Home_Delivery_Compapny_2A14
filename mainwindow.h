@@ -68,6 +68,14 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_PDF_2_clicked();
+
+    void on_imprimer_3_clicked();
+
+    void on_pushButton_19_clicked();
+
+    void on_lineEdit_10_cursorPositionChanged(int arg1, int arg2);
+
 private:
     Ui::MainWindow *ui;
 };

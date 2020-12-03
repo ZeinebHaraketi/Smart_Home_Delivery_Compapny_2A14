@@ -41,6 +41,7 @@ public:
       bool updatemealss(QString meals);
        QString getTableName();
        int calculersport(QString sport);
+        bool verifva1(Ui::MainWindow *ui);
 private:
     QString meals,poids_ideal,duree_regime,sport;
     int ref;

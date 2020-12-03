@@ -413,16 +413,16 @@ QPushButton:hover {
       <property name="geometry">
        <rect>
         <x>60</x>
-        <y>20</y>
+        <y>10</y>
         <width>911</width>
-        <height>491</height>
+        <height>481</height>
        </rect>
       </property>
       <property name="styleSheet">
        <string notr="true">background-image: url(:/back30.jpg);</string>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -432,7 +432,7 @@ QPushButton:hover {
         <property name="geometry">
          <rect>
           <x>110</x>
-          <y>40</y>
+          <y>20</y>
           <width>121</width>
           <height>31</height>
          </rect>
@@ -450,8 +450,8 @@ color: rgb(255, 255, 255);</string>
        <widget class="QLabel" name="label_6">
         <property name="geometry">
          <rect>
-          <x>110</x>
-          <y>130</y>
+          <x>100</x>
+          <y>120</y>
           <width>141</width>
           <height>31</height>
          </rect>
@@ -565,10 +565,10 @@ background-color: rgb(255, 255, 255);</string>
        <widget class="QPushButton" name="pushButton4">
         <property name="geometry">
          <rect>
-          <x>640</x>
-          <y>430</y>
+          <x>630</x>
+          <y>410</y>
           <width>91</width>
-          <height>23</height>
+          <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -594,9 +594,9 @@ QPushButton:hover {
         <property name="geometry">
          <rect>
           <x>780</x>
-          <y>430</y>
-          <width>75</width>
-          <height>23</height>
+          <y>410</y>
+          <width>81</width>
+          <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -618,6 +618,45 @@ QPushButton:hover {
          <string>annuler</string>
         </property>
        </widget>
+       <widget class="QLabel" name="va1">
+        <property name="geometry">
+         <rect>
+          <x>630</x>
+          <y>30</y>
+          <width>47</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="va2">
+        <property name="geometry">
+         <rect>
+          <x>630</x>
+          <y>110</y>
+          <width>47</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="va3">
+        <property name="geometry">
+         <rect>
+          <x>630</x>
+          <y>200</y>
+          <width>47</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="tab_2">
        <attribute name="title">
@@ -626,9 +665,9 @@ QPushButton:hover {
        <widget class="QPushButton" name="pushButton_5">
         <property name="geometry">
          <rect>
-          <x>280</x>
-          <y>430</y>
-          <width>91</width>
+          <x>330</x>
+          <y>410</y>
+          <width>111</width>
           <height>31</height>
          </rect>
         </property>
@@ -655,7 +694,7 @@ QPushButton:hover {
         <property name="geometry">
          <rect>
           <x>580</x>
-          <y>110</y>
+          <y>120</y>
           <width>101</width>
           <height>31</height>
          </rect>
@@ -726,8 +765,8 @@ color: rgb(0, 0, 0);</string>
        <widget class="QPushButton" name="pushButton_15">
         <property name="geometry">
          <rect>
-          <x>150</x>
-          <y>430</y>
+          <x>180</x>
+          <y>410</y>
           <width>101</width>
           <height>31</height>
          </rect>
@@ -965,8 +1004,8 @@ color: rgb(255, 255, 255);
        <widget class="QPushButton" name="pushButton_16">
         <property name="geometry">
          <rect>
-          <x>30</x>
-          <y>430</y>
+          <x>20</x>
+          <y>410</y>
           <width>91</width>
           <height>31</height>
          </rect>
@@ -1021,8 +1060,8 @@ QPushButton:hover {
        <widget class="QPushButton" name="retour">
         <property name="geometry">
          <rect>
-          <x>770</x>
-          <y>420</y>
+          <x>780</x>
+          <y>410</y>
           <width>91</width>
           <height>31</height>
          </rect>
@@ -1044,6 +1083,54 @@ QPushButton:hover {
         </property>
         <property name="text">
          <string>Retour</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_4">
+        <property name="geometry">
+         <rect>
+          <x>460</x>
+          <y>420</y>
+          <width>21</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">image: url(:/impr.png);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_12">
+        <property name="geometry">
+         <rect>
+          <x>590</x>
+          <y>30</y>
+          <width>21</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">image: url(:/supp.png);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_14">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>420</y>
+          <width>21</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">image: url(:/pdf1.png);</string>
+        </property>
+        <property name="text">
+         <string/>
         </property>
        </widget>
       </widget>
@@ -1274,7 +1361,7 @@ color: rgb(255, 255, 255);</string>
           <x>760</x>
           <y>30</y>
           <width>75</width>
-          <height>23</height>
+          <height>41</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -1300,9 +1387,9 @@ QPushButton:hover {
         <property name="geometry">
          <rect>
           <x>540</x>
-          <y>100</y>
-          <width>75</width>
-          <height>23</height>
+          <y>110</y>
+          <width>81</width>
+          <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -1327,10 +1414,10 @@ QPushButton:hover {
        <widget class="QPushButton" name="supprimer2">
         <property name="geometry">
          <rect>
-          <x>540</x>
-          <y>60</y>
+          <x>630</x>
+          <y>40</y>
           <width>75</width>
-          <height>23</height>
+          <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -1355,10 +1442,10 @@ QPushButton:hover {
        <widget class="QPushButton" name="retour2">
         <property name="geometry">
          <rect>
-          <x>780</x>
-          <y>350</y>
-          <width>75</width>
-          <height>23</height>
+          <x>764</x>
+          <y>332</y>
+          <width>91</width>
+          <height>41</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -1450,7 +1537,7 @@ background-color: rgb(255, 255, 255);</string>
           <x>550</x>
           <y>160</y>
           <width>91</width>
-          <height>16</height>
+          <height>21</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -1458,7 +1545,7 @@ background-color: rgb(255, 255, 255);</string>
 color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
-         <string>plat</string>
+         <string>  Plat</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_16">
@@ -1493,6 +1580,138 @@ color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
          <string>Adresse</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="PDF_2">
+        <property name="geometry">
+         <rect>
+          <x>430</x>
+          <y>32</y>
+          <width>75</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+QPushButton{
+background:#ced1d8;
+border-style:outset;
+border-radius:10px;
+}
+QPushButton:pressed{
+background-color:rgb(224,0,0);
+border-style:inset;}
+QPushButton:hover {
+    background-color:rgb(255, 255, 0);
+    }
+</string>
+        </property>
+        <property name="text">
+         <string>PDF</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="imprimer_3">
+        <property name="geometry">
+         <rect>
+          <x>264</x>
+          <y>32</y>
+          <width>101</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+QPushButton{
+background:#ced1d8;
+border-style:outset;
+border-radius:10px;
+}
+QPushButton:pressed{
+background-color:rgb(224,0,0);
+border-style:inset;}
+QPushButton:hover {
+    background-color:rgb(255, 255, 0);
+    }
+</string>
+        </property>
+        <property name="text">
+         <string>Imprimer</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_13">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>40</y>
+          <width>21</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">image: url(:/impr.png);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_17">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>40</y>
+          <width>21</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">image: url(:/pdf1.png);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_18">
+        <property name="geometry">
+         <rect>
+          <x>600</x>
+          <y>50</y>
+          <width>21</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">image: url(:/supp.png);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_19">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>40</y>
+          <width>81</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+QPushButton{
+background:#ced1d8;
+border-style:outset;
+border-radius:10px;
+}
+QPushButton:pressed{
+background-color:rgb(224,0,0);
+border-style:inset;}
+QPushButton:hover {
+    background-color:rgb(255, 255, 0);
+    }
+</string>
+        </property>
+        <property name="text">
+         <string>Trier</string>
         </property>
        </widget>
       </widget>
