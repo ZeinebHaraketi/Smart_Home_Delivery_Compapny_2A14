@@ -241,7 +241,7 @@ return query.exec();
      QPixmap PixTrueIcon=QPixmap(":/oui1.png");
     QPixmap PixFalseIcon=QPixmap(":/non1.png");
 
-     if (ui->label_10->text().isEmpty() ||ui->lineEdit_10->text().length()<1|| ui->lineEdit_10->text().length()>3|| ui->lineEdit_10->text().contains(QRegExp("[^0-9]")))
+     if (ui->label_10->text().isEmpty() ||ui->lineEdit_10->text().length()<2|| ui->lineEdit_10->text().length()>3|| ui->lineEdit_10->text().contains(QRegExp("[^0-9]")))
      {
          ui->va1->setPixmap(PixFalseIcon);
          return false;
@@ -260,7 +260,7 @@ return query.exec();
       QPixmap PixTrueIcon=QPixmap(":/oui1.png");
      QPixmap PixFalseIcon=QPixmap(":/non1.png");
 
-      if (ui->label_11->text().isEmpty() || ui->lineEdit_11->text().length()>8||ui->lineEdit_11->text().length()<1)
+      if (ui->label_11->text().isEmpty() || ui->lineEdit_11->text().length()>20||ui->lineEdit_11->text().length()<1)
       {
           ui->va2->setPixmap(PixFalseIcon);
           return false;
@@ -279,7 +279,7 @@ return query.exec();
       QPixmap PixTrueIcon=QPixmap(":/oui1.png");
      QPixmap PixFalseIcon=QPixmap(":/non1.png");
 
-      if (ui->label_9->text().isEmpty() || ui->lineEdit_9->text().length()<5||ui->lineEdit_9->text().length()<1)
+      if (ui->label_9->text().isEmpty() || ui->lineEdit_9->text().length()>20||ui->lineEdit_9->text().length()<1)
       {
           ui->va3->setPixmap(PixFalseIcon);
           return false;

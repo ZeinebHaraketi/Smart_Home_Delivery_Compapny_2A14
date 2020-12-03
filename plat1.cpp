@@ -73,6 +73,7 @@ bool plat1::modifier1(Ui::MainWindow *ui)
    return  (query.exec());
 
 }
+/********supprimer_2*********/
  bool plat1::supprimer(Ui::MainWindow *ui)
  {
      QString ref=ui->tableView2->model()->data(ui->tableView2->model()->index(ui->tableView2->selectionModel()->currentIndex().row(),0)).toString();
@@ -93,3 +94,60 @@ bool plat1::modifier1(Ui::MainWindow *ui)
          return false;
      }
  }
+ /**********verifier_va4*******/
+  bool plat1 ::verifva4(Ui::MainWindow *ui)
+  {
+      QPixmap PixTrueIcon=QPixmap(":/oui1.png");
+     QPixmap PixFalseIcon=QPixmap(":/non1.png");
+
+      if (ui->label_3->text().isEmpty() || ui->lineEdit_3->text().length()>20||ui->lineEdit_3->text().length()<1)
+      {
+          ui->va4->setPixmap(PixFalseIcon);
+          return false;
+
+      }
+      else
+      {
+          ui->va4->setPixmap(PixTrueIcon);
+          return true;
+
+      }
+  }
+  /**********verifier_va5*******/
+   bool plat1 :: verifva5(Ui::MainWindow *ui)
+   {
+       QPixmap PixTrueIcon=QPixmap(":/oui1.png");
+      QPixmap PixFalseIcon=QPixmap(":/non1.png");
+
+       if (ui->label_4->text().isEmpty() || ui->lineEdit_4->text().length()>20||ui->lineEdit_4->text().length()<1)
+       {
+           ui->va5->setPixmap(PixFalseIcon);
+           return false;
+
+       }
+       else
+       {
+           ui->va5->setPixmap(PixTrueIcon);
+           return true;
+
+       }
+   }
+   /**********verifier_va6*******/
+    bool plat1 ::verifva6(Ui::MainWindow *ui)
+    {
+        QPixmap PixTrueIcon=QPixmap(":/oui1.png");
+       QPixmap PixFalseIcon=QPixmap(":/non1.png");
+
+        if (ui->label_5->text().isEmpty() || ui->lineEdit_5->text().length()>20||ui->lineEdit_5->text().length()<1)
+        {
+            ui->va6->setPixmap(PixFalseIcon);
+            return false;
+
+        }
+        else
+        {
+            ui->va6->setPixmap(PixTrueIcon);
+            return true;
+
+        }
+    }

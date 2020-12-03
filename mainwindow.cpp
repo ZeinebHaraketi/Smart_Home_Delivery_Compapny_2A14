@@ -352,7 +352,7 @@ void MainWindow::on_ajouter2_clicked()
          bool test=p1.ajouter(nomplat,ingredients,adresse,paymant);
          ui->tableView2->setModel(p1.afficher());
          QMessageBox msgBox;
-          if(test)
+          if(test&&p1.verifva4(ui)&& p1.verifva5(ui)&&p1.verifva6(ui))
         {
               ui->tableView2->setModel(p1.afficher());
                                      msgBox.setText(" Ajouté.");
@@ -564,4 +564,22 @@ void MainWindow::on_lineEdit_9_cursorPositionChanged(int arg1, int arg2)
 {
     machines m;
     m.verifva3(ui);
+}
+
+void MainWindow::on_lineEdit_3_cursorPositionChanged(int arg1, int arg2)
+{
+    plat1 p1;
+    p1.verifva4(ui);
+}
+
+void MainWindow::on_lineEdit_4_cursorPositionChanged(int arg1, int arg2)
+{
+    plat1 p1;
+    p1.verifva5(ui);
+}
+
+void MainWindow::on_lineEdit_5_cursorPositionChanged(int arg1, int arg2)
+{
+    plat1 p1;
+    p1.verifva6(ui);
 }
