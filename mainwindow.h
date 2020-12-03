@@ -1,6 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
+#include <QPropertyAnimation>
 #include <QMainWindow>
 #include"statistiques.h"
 QT_BEGIN_NAMESPACE
@@ -88,5 +88,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+
+    QPropertyAnimation *animation ;
 };
 #endif // MAINWINDOW_H

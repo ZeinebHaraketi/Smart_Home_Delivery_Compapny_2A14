@@ -40,6 +40,19 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     ui->tableView->horizontalHeader()->sectionResizeMode(QHeaderView::Interactive);;
+    animation =new QPropertyAnimation(ui->label,"geometry");
+        animation->setDuration(10000);
+        animation->setStartValue(ui->label->geometry());
+        animation->setEndValue(QRect(200,200,100,50));
+
+        QEasingCurve curve;
+        curve.setType(QEasingCurve::OutBounce);
+        animation->setEasingCurve(curve);
+        curve.setAmplitude(2.00);
+        animation->setLoopCount(3);
+        animation->start();
+
+
 }
 
 MainWindow::~MainWindow()

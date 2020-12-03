@@ -13,5 +13,6 @@
         <file>../supp.png</file>
         <file>../oui1.png</file>
         <file>../non1.png</file>
+        <file>../welcome.jpg</file>
     </qresource>
 </RCC>
