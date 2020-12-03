@@ -100,7 +100,7 @@ bool plat1::modifier1(Ui::MainWindow *ui)
       QPixmap PixTrueIcon=QPixmap(":/oui1.png");
      QPixmap PixFalseIcon=QPixmap(":/non1.png");
 
-      if (ui->label_3->text().isEmpty() || ui->lineEdit_3->text().length()>20||ui->lineEdit_3->text().length()<1)
+      if (ui->label_3->text().isEmpty() || ui->lineEdit_3->text().length()>20||ui->lineEdit_3->text().length()<1||ui->lineEdit_3->text().contains(QRegExp("[^a-zA-Z]")))
       {
           ui->va4->setPixmap(PixFalseIcon);
           return false;
@@ -119,7 +119,7 @@ bool plat1::modifier1(Ui::MainWindow *ui)
        QPixmap PixTrueIcon=QPixmap(":/oui1.png");
       QPixmap PixFalseIcon=QPixmap(":/non1.png");
 
-       if (ui->label_4->text().isEmpty() || ui->lineEdit_4->text().length()>20||ui->lineEdit_4->text().length()<1)
+       if (ui->label_4->text().isEmpty() || ui->lineEdit_4->text().length()>20||ui->lineEdit_4->text().length()<1||ui->lineEdit_4->text().contains(QRegExp("[^a-zA-Z]")))
        {
            ui->va5->setPixmap(PixFalseIcon);
            return false;
