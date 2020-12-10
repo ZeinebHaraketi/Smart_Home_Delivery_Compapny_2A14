@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>InterfaceCommandesVentes</class>
+ <widget class="QWidget" name="InterfaceCommandesVentes">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1302</width>
+    <height>669</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>1251</width>
+     <height>621</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>80</y>
+      <width>1161</width>
+      <height>471</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Ajouter CommandesVentes</string>
+     </attribute>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>150</y>
+        <width>101</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Nom du Produit</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>60</y>
+        <width>131</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Id_CommandesVentes</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>60</y>
+        <width>221</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_2">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>150</y>
+        <width>221</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>280</y>
+        <width>55</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Prix</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_3">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>280</y>
+        <width>161</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>400</y>
+        <width>121</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Date de Fabrication</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>390</y>
+        <width>73</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Jour</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>4</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>5</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>6</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>7</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>8</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>9</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>10</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>11</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>12</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>13</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>14</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>15</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>16</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>17</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>18</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>19</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>20</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>21</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>22</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>23</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>24</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>25</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>26</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>27</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>28</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>29</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>31</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_2">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>390</y>
+        <width>73</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Mois</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Janvier</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Février</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Mars</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Avril</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Mai</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Juin</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Juillet</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Aout</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Septembre</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Octobre</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Novembre</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Décembre</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QDialogButtonBox" name="buttonBox">
+      <property name="geometry">
+       <rect>
+        <x>920</x>
+        <y>380</y>
+        <width>193</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="standardButtons">
+       <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Afficher CommandesVentes</string>
+     </attribute>
+     <widget class="QTableWidget" name="tableWidget">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>70</y>
+        <width>641</width>
+        <height>331</height>
+       </rect>
+      </property>
+      <row>
+       <property name="text">
+        <string>Infos Commandes</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>CommandesV1</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>CommandesV2</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>CommandesV3</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>CommandesV4</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>CommandesV6</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Nouvelle ligne</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>CommandesV8</string>
+       </property>
+      </row>
+      <column>
+       <property name="text">
+        <string>  Id_CommandesV</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>nom_Produit</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Prix</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Date_Fabrication</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QComboBox" name="comboBox_3">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>20</y>
+        <width>111</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Recherche</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Id_CommandesV</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>nom_Produit</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Prix</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Date_Fabrication</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_4">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>20</y>
+        <width>81</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Trie</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Id_CommandesV</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>nom_Produit</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Prix</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Date_Fabrication</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>960</x>
+        <y>390</y>
+        <width>181</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Imprimer Commandes en PDF</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>10</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Modifier</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="geometry">
+       <rect>
+        <x>820</x>
+        <y>10</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Supprimer</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="geometry">
+       <rect>
+        <x>1020</x>
+        <y>20</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Statistiques</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
