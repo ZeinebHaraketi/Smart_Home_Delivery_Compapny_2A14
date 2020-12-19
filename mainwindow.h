@@ -3,6 +3,8 @@
 #include <QPropertyAnimation>
 #include <QMainWindow>
 #include"statistiques.h"
+#include "GestionClient_ComdV.h"
+#include "admin.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -85,6 +87,8 @@ private slots:
     void on_lineEdit_4_cursorPositionChanged(int arg1, int arg2);
 
     void on_lineEdit_5_cursorPositionChanged(int arg1, int arg2);
+
+    void on_zaneib_clicked();
 
 private:
     Ui::MainWindow *ui;

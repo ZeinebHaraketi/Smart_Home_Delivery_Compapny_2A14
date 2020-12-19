@@ -187,10 +187,10 @@ background-color: rgb(85, 85, 255);
 </string>
       </property>
       <property name="text">
-       <string>PLAT ET PROGRAMME DIET</string>
+       <string>1) PLAT ET PROGRAMME DIET</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_8">
+     <widget class="QPushButton" name="zaneib">
       <property name="geometry">
        <rect>
         <x>170</x>
@@ -219,7 +219,7 @@ background-color: rgb(85, 85, 255);
 </string>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string>2) Gestion de commandes de vente</string>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_9">

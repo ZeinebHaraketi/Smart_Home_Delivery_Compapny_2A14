@@ -1,5 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "GestionClient_ComdV.h"
+#include "ui_GestionClient_ComdV.h"
 #include "machine.h"
 #include <QMessageBox>
 #include "mainwindow.h"
@@ -30,7 +32,7 @@
 #include<QtSql/QSqlQuery>
 #include<QVariant>
 #include"plat1.h"
-
+#include "admin.h"
 
 
 
@@ -64,12 +66,45 @@ MainWindow::~MainWindow()
 
 
 void MainWindow::on_pushButton1_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(1);
-    machines M;
-    ui->tableView->setModel(M.afficher());
-    plat1 p1;
-     ui->tableView2->setModel(p1.afficher());
+{   admin a1;
+    QMessageBox msgBox;
+    QString ID,MOT_de_passe;
+ID=ui->lineEdit->text();
+MOT_de_passe=ui->lineEdit_2->text();
+if((ID!="")&&(MOT_de_passe!=""))
+{if(a1.chercher(ID,MOT_de_passe))
+    {   QMediaPlayer * bulletsound = new QMediaPlayer();
+        bulletsound->setMedia(QUrl::fromLocalFile("C:/Users/HP/Downloads/son3.wav"));
+       if (bulletsound->state() == QMediaPlayer::PlayingState){
+            bulletsound->setPosition(0);
+        }
+        else if (bulletsound->state() == QMediaPlayer::StoppedState)
+       {
+            bulletsound->play();} }
+        ui->stackedWidget->setCurrentIndex(1);
+        machines M;
+        ui->tableView->setModel(M.afficher());
+        plat1 p1;
+         ui->tableView2->setModel(p1.afficher());
+         msgBox.setText(" bienvenue.");
+         msgBox.exec();}
+
+
+
+         else{ QMediaPlayer * bulletsound = new QMediaPlayer();
+           bulletsound->setMedia(QUrl::fromLocalFile("C:/Users/HP/Downloads/son2.wav"));
+          if (bulletsound->state() == QMediaPlayer::PlayingState){
+               bulletsound->setPosition(0);
+           }
+           else if (bulletsound->state() == QMediaPlayer::StoppedState){
+               bulletsound->play();}
+
+           msgBox.setText("faux compte.");
+             msgBox.exec();
+
+
+
+}
 }
 
 void MainWindow::on_pushButton2_clicked()
@@ -595,4 +630,14 @@ void MainWindow::on_lineEdit_5_cursorPositionChanged(int arg1, int arg2)
 {
     plat1 p1;
     p1.verifva6(ui);
+}
+
+void MainWindow::on_zaneib_clicked()
+{
+    this->hide() ;
+
+           GestionClient_ComdV * m;
+            m=new GestionClient_ComdV(this);
+
+            m->show();
 }

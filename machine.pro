@@ -11,6 +11,10 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    GestionClient_ComdV.cpp \
+    admin.cpp \
+    client.cpp \
+    commandesv.cpp \
     connection.cpp \
     machine.cpp \
     main.cpp \
@@ -19,6 +23,10 @@ SOURCES += \
     statistiques.cpp
 
 HEADERS += \
+    GestionClient_ComdV.h \
+    admin.h \
+    client.h \
+    commandesv.h \
     connection.h \
     machine.h \
     mainwindow.h \
@@ -26,6 +34,7 @@ HEADERS += \
     statistiques.h
 
 FORMS += \
+    GestionClient_ComdV.ui \
     mainwindow.ui \
     statistiques.ui
 
