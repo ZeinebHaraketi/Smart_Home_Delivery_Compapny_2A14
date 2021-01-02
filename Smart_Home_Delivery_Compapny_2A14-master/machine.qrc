@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/new/prefix1"/>
+    <qresource prefix="/fray"/>
+    <qresource prefix="/">
+        <file>../bg1.jpg</file>
+        <file>../back30.jpg</file>
+        <file>../diet1.jpg</file>
+        <file>../meal2.jpg</file>
+        <file>../impr.png</file>
+        <file>../pdf1.png</file>
+        <file>../supp.png</file>
+        <file>../oui1.png</file>
+        <file>../non1.png</file>
+    </qresource>
+</RCC>
