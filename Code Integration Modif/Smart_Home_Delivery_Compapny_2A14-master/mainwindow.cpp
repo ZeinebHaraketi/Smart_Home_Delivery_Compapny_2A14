@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include "GestionClient_ComdV.h"
 #include "ui_GestionClient_ComdV.h"
+#include "maingrh.h"
 #include "machine.h"
 #include <QMessageBox>
 #include "mainwindow.h"
@@ -647,4 +648,14 @@ void MainWindow::on_zaneib_clicked()
             m=new GestionClient_ComdV(this);
 
             m->show();
+}
+
+
+
+void MainWindow::on_amine_clicked()
+{
+    maingrh *main;
+    main=new maingrh(this);
+
+    main->show();
 }

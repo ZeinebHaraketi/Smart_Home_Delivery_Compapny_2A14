@@ -90,6 +90,10 @@ private slots:
 
     void on_zaneib_clicked();
 
+    void on_pushButton_9_clicked();
+
+    void on_amine_clicked();
+
 private:
     Ui::MainWindow *ui;
 

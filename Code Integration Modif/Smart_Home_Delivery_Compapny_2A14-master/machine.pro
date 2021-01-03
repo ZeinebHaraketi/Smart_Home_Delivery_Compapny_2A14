@@ -20,8 +20,13 @@ SOURCES += \
     connection.cpp \
     machine.cpp \
     main.cpp \
+    maingrh.cpp \
     mainwindow.cpp \
+    person.cpp \
+    personnel.cpp \
     plat1.cpp \
+    poste.cpp \
+    postes.cpp \
     statistiques.cpp
 
 HEADERS += \
@@ -33,13 +38,21 @@ HEADERS += \
     commd_v_ang.h \
     connection.h \
     machine.h \
+    maingrh.h \
     mainwindow.h \
+    person.h \
+    personnel.h \
     plat1.h \
+    poste.h \
+    postes.h \
     statistiques.h
 
 FORMS += \
     GestionClient_ComdV.ui \
+    maingrh.ui \
     mainwindow.ui \
+    personnel.ui \
+    postes.ui \
     statistiques.ui
 
 # Default rules for deployment.

@@ -222,7 +222,7 @@ background-color: rgb(85, 85, 255);
        <string>2) Gestion de commandes de vente</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_9">
+     <widget class="QPushButton" name="amine">
       <property name="geometry">
        <rect>
         <x>170</x>
@@ -251,7 +251,7 @@ background-color: rgb(85, 85, 255);
 </string>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string>3) Gestion des ressources humaines</string>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_10">
@@ -1764,7 +1764,7 @@ QPushButton:hover {
      <x>0</x>
      <y>0</y>
      <width>970</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>
