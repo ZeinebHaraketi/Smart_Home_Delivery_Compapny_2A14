@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>maingrh</class>
+ <widget class="QDialog" name="maingrh">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>672</width>
+    <height>484</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QPushButton" name="pushButton_perso">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>320</y>
+     <width>171</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Gestion Personnel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>70</y>
+     <width>441</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Perpetua Titling MT</family>
+     <pointsize>14</pointsize>
+     <underline>true</underline>
+    </font>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::WinPanel</enum>
+   </property>
+   <property name="text">
+    <string>                          GESTION RH                                       </string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_postes">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>210</y>
+     <width>171</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Gestion Postes</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
