@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>../back30.jpg</file>
+        <file>../bg1.jpg</file>
+        <file>../diet1.jpg</file>
+        <file>../impr.png</file>
+        <file>../machines.png</file>
+        <file>../meal2.jpg</file>
+        <file>../non1.png</file>
+        <file>../oui1.png</file>
+        <file>../pdf1.png</file>
+        <file>../plats1.PNG</file>
+        <file>../supp.png</file>
+    </qresource>
+</RCC>
