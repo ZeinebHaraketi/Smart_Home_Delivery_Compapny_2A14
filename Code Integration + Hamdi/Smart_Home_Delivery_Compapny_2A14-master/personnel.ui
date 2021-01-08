@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
@@ -145,12 +145,12 @@
        <rect>
         <x>20</x>
         <y>130</y>
-        <width>51</width>
+        <width>71</width>
         <height>16</height>
        </rect>
       </property>
       <property name="text">
-       <string>Téléphone</string>
+       <string>Mot de passe</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_13">
@@ -565,6 +565,19 @@
      </property>
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>0</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>mail</string>
      </property>
     </widget>
    </widget>

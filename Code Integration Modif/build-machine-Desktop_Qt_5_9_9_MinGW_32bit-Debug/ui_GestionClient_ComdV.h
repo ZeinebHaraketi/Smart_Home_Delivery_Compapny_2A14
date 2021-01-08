@@ -1180,8 +1180,8 @@ public:
 
         retranslateUi(GestionClient_ComdV);
 
-        toolBox->setCurrentIndex(4);
-        tabWidget->setCurrentIndex(2);
+        toolBox->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(1);
         tabWidget_2->setCurrentIndex(1);
         tabWidget_4->setCurrentIndex(1);
         tabWidget_3->setCurrentIndex(1);

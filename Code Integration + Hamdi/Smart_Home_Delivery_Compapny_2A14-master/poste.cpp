@@ -18,6 +18,7 @@ void Poste::setsalaire(float salaire){this->salaire=salaire;}
 bool Poste::ajouterposte()
 {
 
+
     QSqlQuery query;
   QString id_string= QString::number(idposte);
   QString salaire_string= QString::number(salaire);

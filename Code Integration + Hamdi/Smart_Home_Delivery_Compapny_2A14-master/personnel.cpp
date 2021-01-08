@@ -26,7 +26,8 @@
 #include <QPrintDialog>
 #include<QtSql/QSqlQuery>
 #include<QVariant>
-
+#include "smtpp.h"
+#include "ui_smtpp.h"
 personnel::personnel(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::personnel)
@@ -227,4 +228,12 @@ void personnel::on_ajoutperso_clicked()
      msgBox.setText("Echec d'ajout");
      msgBox.exec();
 
+}
+
+void personnel::on_pushButton_clicked()
+{
+    smtpp *p;
+    p= new smtpp(this);
+
+    p->show();
 }

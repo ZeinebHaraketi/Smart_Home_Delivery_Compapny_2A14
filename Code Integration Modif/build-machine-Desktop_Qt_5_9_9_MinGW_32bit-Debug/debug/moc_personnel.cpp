@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../Smart_Home_Delivery_Compapny_2A14-master/personnel.h"
+#include "../../../Code Integration + Hamdi/Smart_Home_Delivery_Compapny_2A14-master/personnel.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
@@ -104,7 +104,7 @@ void personnel::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         case 4: _t->on_supp_perso_clicked(); break;
         case 5: _t->on_selectidperso_clicked(); break;
         case 6: _t->on_Ajouterpo_clicked(); break;
-        //case 7: _t->on_pushButton_clicked(); break;
+        case 7: _t->on_pushButton_clicked(); break;
         case 8: _t->on_ajoutperso_clicked(); break;
         default: ;
         }

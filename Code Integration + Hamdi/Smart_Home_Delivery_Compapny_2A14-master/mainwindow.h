@@ -5,6 +5,7 @@
 #include"statistiques.h"
 #include "GestionClient_ComdV.h"
 #include "admin.h"
+#include "arduino.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -96,8 +97,25 @@ private slots:
 
     void on_Hamdi_clicked();
 
+    void on_radioButton_clicked();
+
 private:
     Ui::MainWindow *ui;
+QByteArray data;
+const QString commTabText;
+const QString lcdTabText;
+//const qint32 defaultBaudRate;
+
+
+
+//Ports related
+QSerialPort *ard;
+QString currentPort;
+QList <QSerialPortInfo> portInfoList;
+QStringList baudRateList;
+
+qint32 currentBaudRate;
+QString currentBaudRateString;
 
     QPropertyAnimation *animation ;
 };

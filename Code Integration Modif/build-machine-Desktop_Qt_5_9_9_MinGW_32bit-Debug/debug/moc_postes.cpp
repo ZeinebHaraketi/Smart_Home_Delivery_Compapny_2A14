@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../Smart_Home_Delivery_Compapny_2A14-master/postes.h"
+#include "../../../Code Integration + Hamdi/Smart_Home_Delivery_Compapny_2A14-master/postes.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)

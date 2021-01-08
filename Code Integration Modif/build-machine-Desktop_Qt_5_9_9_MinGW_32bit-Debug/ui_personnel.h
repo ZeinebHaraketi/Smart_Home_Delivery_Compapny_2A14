@@ -79,6 +79,7 @@ public:
     QCommandLinkButton *miseajour;
     QTableWidget *tableWidget;
     QFrame *line;
+    QPushButton *pushButton;
 
     void setupUi(QDialog *personnel)
     {
@@ -122,7 +123,7 @@ public:
         label_10->setGeometry(QRect(20, 100, 47, 14));
         label_11 = new QLabel(Ajouter_personnel);
         label_11->setObjectName(QStringLiteral("label_11"));
-        label_11->setGeometry(QRect(20, 130, 51, 16));
+        label_11->setGeometry(QRect(20, 130, 71, 16));
         label_13 = new QLabel(Ajouter_personnel);
         label_13->setObjectName(QStringLiteral("label_13"));
         label_13->setGeometry(QRect(30, 170, 47, 14));
@@ -243,11 +244,14 @@ public:
         line->setGeometry(QRect(10, 10, 118, 16));
         line->setFrameShape(QFrame::HLine);
         line->setFrameShadow(QFrame::Sunken);
+        pushButton = new QPushButton(tab_2);
+        pushButton->setObjectName(QStringLiteral("pushButton"));
+        pushButton->setGeometry(QRect(300, 0, 75, 23));
         tabWidget->addTab(tab_2, QString());
 
         retranslateUi(personnel);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
         tabWidget_2->setCurrentIndex(0);
 
 
@@ -261,7 +265,7 @@ public:
         Ajouter_personnel->setTitle(QApplication::translate("personnel", "Ajouter personnel", Q_NULLPTR));
         ajoutperso->setText(QApplication::translate("personnel", "Ajouter", Q_NULLPTR));
         label_10->setText(QApplication::translate("personnel", "E-mail", Q_NULLPTR));
-        label_11->setText(QApplication::translate("personnel", "T\303\251l\303\251phone", Q_NULLPTR));
+        label_11->setText(QApplication::translate("personnel", "Mot de passe", Q_NULLPTR));
         label_13->setText(QApplication::translate("personnel", "idposte", Q_NULLPTR));
         label_3->setText(QApplication::translate("personnel", "Prenom", Q_NULLPTR));
         label->setText(QApplication::translate("personnel", "ID", Q_NULLPTR));
@@ -290,6 +294,7 @@ public:
         label_9->setText(QApplication::translate("personnel", "ID-POSTE", Q_NULLPTR));
         miseajour->setText(QApplication::translate("personnel", "Mise A Jour", Q_NULLPTR));
         tabWidget_2->setTabText(tabWidget_2->indexOf(tab_5), QApplication::translate("personnel", "Modifier", Q_NULLPTR));
+        pushButton->setText(QApplication::translate("personnel", "mail", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("personnel", "Affichage", Q_NULLPTR));
     } // retranslateUi
 

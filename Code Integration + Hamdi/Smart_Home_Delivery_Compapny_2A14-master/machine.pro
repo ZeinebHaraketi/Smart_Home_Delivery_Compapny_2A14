@@ -2,6 +2,8 @@ QT       += core gui sql
 QT       +=printsupport
 QT       +=multimedia
 QT       +=charts
+QT       +=network
+QT       +=serialport
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
@@ -13,6 +15,7 @@ CONFIG += c++11
 SOURCES += \
     GestionClient_ComdV.cpp \
     admin.cpp \
+    arduino.cpp \
     article.cpp \
     client.cpp \
     clientanglais.cpp \
@@ -30,11 +33,14 @@ SOURCES += \
     poste.cpp \
     postes.cpp \
     promotion.cpp \
+    smtp.cpp \
+    smtpp.cpp \
     statistiques.cpp
 
 HEADERS += \
     GestionClient_ComdV.h \
     admin.h \
+    arduino.h \
     article.h \
     client.h \
     clientanglais.h \
@@ -51,6 +57,8 @@ HEADERS += \
     poste.h \
     postes.h \
     promotion.h \
+    smtp.h \
+    smtpp.h \
     statistiques.h
 
 FORMS += \
@@ -60,6 +68,7 @@ FORMS += \
     mainwindow.ui \
     personnel.ui \
     postes.ui \
+    smtpp.ui \
     statistiques.ui
 
 # Default rules for deployment.
@@ -71,3 +80,6 @@ RESOURCES += \
     machine.qrc
 
 DISTFILES +=
+
+SUBDIRS += \
+    QArduinoTools.pro

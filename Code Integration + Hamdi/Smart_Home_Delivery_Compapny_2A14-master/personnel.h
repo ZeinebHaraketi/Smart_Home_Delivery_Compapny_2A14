@@ -2,7 +2,7 @@
 #define PERSONNEL_H
 #include "person.h"
 #include <QDialog>
-
+#include "smtpp.h"
 namespace Ui {
 class personnel;
 }
@@ -37,6 +37,7 @@ private slots:
 private:
     Ui::personnel *ui;
     Person PE;
+    smtpp *sm;
 };
 
 #endif // PERSONNEL_H

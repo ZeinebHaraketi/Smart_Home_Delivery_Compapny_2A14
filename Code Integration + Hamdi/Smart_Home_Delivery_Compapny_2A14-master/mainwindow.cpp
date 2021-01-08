@@ -9,6 +9,7 @@
 #include "promotion.h"
 #include "machine.h"
 #include <QMessageBox>
+#include <QDebug>
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <iostream>
@@ -40,15 +41,17 @@
 #include "admin.h"
 #include "commd_v_ang.h"
 #include "clientanglais.h"
-
-
-
+#include "ui_qarduinodialog.h"
+#include "QByteArray"
+//#include "qarduinodialog.h"
+#include "arduino.h"
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
     ui->tableView->horizontalHeader()->sectionResizeMode(QHeaderView::Interactive);;
+   //  a.write_to_arduino(data);
     animation =new QPropertyAnimation(ui->label,"geometry");
         animation->setDuration(10000);
         animation->setStartValue(ui->label->geometry());
@@ -60,6 +63,25 @@ MainWindow::MainWindow(QWidget *parent)
         curve.setAmplitude(2.00);
         animation->setLoopCount(3);
         animation->start();
+
+        ard = new QSerialPort(this);
+
+        connect(ard, SIGNAL(readyRead()), this, SLOT(readArduino()));
+        //qDebug() << currentBaudRate;
+        ard->setPortName("COM3");
+        if (ard->open(QIODevice::ReadWrite)){
+            ard->setBaudRate((qint32)9600);
+                ard->setDataBits(QSerialPort::Data8);
+                ard->setParity(QSerialPort::NoParity);
+                ard->setStopBits(QSerialPort::OneStop);
+                // Skipping hw/sw control
+                ard->setFlowControl(QSerialPort::NoFlowControl);
+                QSerialPortInfo info("COM3");
+                QMessageBox::information(this, "Connection successful", "Successfully connected to : COM3");
+        } else {
+            QMessageBox::warning(this, "Connection Failed", "Retry");
+        }
+
 
 
 }
@@ -98,7 +120,33 @@ if((ID!="")&&(MOT_de_passe!=""))
         plat1 p1;
          ui->tableView2->setModel(p1.afficher());
          msgBox.setText(" bienvenue.");
-         msgBox.exec();}
+        // A.write_to_arduino("hello");
+         if (!ard->isOpen()) QMessageBox::information(this, "No Arduino Detected", "Please connect an Arduino and click connect from Connection Manager");
+
+         else {
+             QSqlQuery query;
+int id;
+                  query.prepare("SELECT nomperso from tab_perso where id_perso=:id");
+                  query.bindValue(0, id=ui->lineEdit->text().toInt());
+
+                  query.exec();
+
+                  if (query.next()) {
+                         QString stock =QVariant(query.value(0)).toString() ;
+                         // You could store the information you obtain here in a vector or something
+
+
+             arduino a1;
+             a1.chercherard(ID=ui->lineEdit->text());
+             ard->write("#");
+             QByteArray text=stock.toUtf8();
+
+             ard->write(text);
+                  }
+         }
+         msgBox.exec();
+
+    }
 
 
 
@@ -117,6 +165,7 @@ if((ID!="")&&(MOT_de_passe!=""))
 
 
 }
+
 }
 
 void MainWindow::on_pushButton2_clicked()
@@ -670,3 +719,4 @@ void MainWindow::on_Hamdi_clicked(){
 
     pro->show();
 }
+

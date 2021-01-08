@@ -45,7 +45,7 @@ public:
     QPushButton *pushButton2;
     QPushButton *zaneib;
     QPushButton *amine;
-    QPushButton *pushButton_10;
+    QPushButton *Hamdi;
     QPushButton *pushButton_11;
     QWidget *page_3;
     QPushButton *pushButton3;
@@ -262,10 +262,10 @@ public:
 "background-color: rgb(85, 85, 255);\n"
 "    }\n"
 ""));
-        pushButton_10 = new QPushButton(page_2);
-        pushButton_10->setObjectName(QStringLiteral("pushButton_10"));
-        pushButton_10->setGeometry(QRect(170, 280, 341, 31));
-        pushButton_10->setStyleSheet(QLatin1String("\n"
+        Hamdi = new QPushButton(page_2);
+        Hamdi->setObjectName(QStringLiteral("Hamdi"));
+        Hamdi->setGeometry(QRect(170, 280, 341, 31));
+        Hamdi->setStyleSheet(QLatin1String("\n"
 "\n"
 "\n"
 "QPushButton{\n"
@@ -950,7 +950,7 @@ public:
         pushButton2->setText(QApplication::translate("MainWindow", "1) PLAT ET PROGRAMME DIET", Q_NULLPTR));
         zaneib->setText(QApplication::translate("MainWindow", "2) Gestion de commandes de vente", Q_NULLPTR));
         amine->setText(QApplication::translate("MainWindow", "3) Gestion des ressources humaines", Q_NULLPTR));
-        pushButton_10->setText(QApplication::translate("MainWindow", "PushButton", Q_NULLPTR));
+        Hamdi->setText(QApplication::translate("MainWindow", "4) Gestion des Articles et des Promotions", Q_NULLPTR));
         pushButton_11->setText(QApplication::translate("MainWindow", "PushButton", Q_NULLPTR));
         pushButton3->setText(QString());
         pushButton_2->setText(QString());
